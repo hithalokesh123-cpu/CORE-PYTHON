@@ -101,8 +101,117 @@ print(c)'''
 alt={j:i for i,j in d.items()}
 print(alt)'''
 
+#################### DAY 2 ########################
+#Count the number of digits in a given number
+'''n=45678
+count=0
+while n>0:
+    d=n%10
+    count+=1
+    n//=10
+print(count)'''
+
+#print the multiplication table of a given number using a while loop
+'''i=1
+while i<=10:
+    print(f'{5} X {i} ={5*i}')
+    i+=1'''
+    
+#Find the sum of all even digits in a given number using a while loop
+'''n=123456
+sum=0
+while n>0:
+    d=n%10
+    if d%2==0:
+        sum+=d
+    n//=10
+print(sum) '''       
+
+#count how many even digit and odd digit are present in a given number
+'''n=123456
+even_no=0
+odd_no=0
+while n>0:
+    d=n%10
+    if d%2==0:
+        even_no+=1
+    else:
+        odd_no+=1
+    n//=10
+print('Even digits:',even_no)
+print('Odd digits:',odd_no) '''
+
+#reverse the string using while loop
+'''s='python'
+rev=" "
+i=0
+while i<len(s):
+    rev=s[i]+rev
+    i+=1
+print(rev)'''
+
+#check whether the number is a perfect number using while loop
+'''n=6
+temp=n
+sum=0
+i=1
+while i<n:
+    if n%i==0:
+        sum+=i
+    i+=1
+if sum == temp:
+    print('it is perfect number',temp)
+else:
+    print('it is not perfect number',temp)'''
+
+#check whether the number is a strong number using while loop
+'''n=145
+temp=n
+sum=0
+while n>0:
+    d=n%10
+    fact=1
+    for i in range(1,d+1):
+        fact*=i
+    sum+=fact
+    n//=10
+if sum == temp:
+    print('it is strong number',temp)
+else:
+    print('it is not strong number',temp)'''
+
+#check whether the number is a armstrong number using while loop
+'''n=153
+temp=n
+sum=0
+length=len(str(n))
+while n>0:
+    d=n%10
+    a=d**length
+    sum+=a
+    n//=10
+if sum == temp:
+    print('it is armstrong number',temp)
+else:
+    print('it is not armstrong number',temp)'''
 
 
+#find the largest digit in the given number using a while loop
+'''n=58329
+largest=0
+while n>0:
+    d=n%10
+    if d >largest:
+         largest = d
+    n//=10
+print('Largest digit:',largest)'''    
 
-
-
+#find the smallest digit in the given number using a while loop
+'''n=58329
+small=9
+while n>0:
+    d=n%10
+    if d < small:
+        small=d
+    n//=10
+print('Smallest digit:',small)'''
