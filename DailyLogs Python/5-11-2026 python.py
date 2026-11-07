@@ -215,3 +215,95 @@ while n>0:
         small=d
     n//=10
 print('Smallest digit:',small)'''
+
+
+########################### DAY 3 ############################################
+########################## SINGLE LEVEL INHERITANCE ##########################
+#PERSON AND STUDENT
+'''class Person:
+    name='mala'
+    age=40
+    
+class child(Person):
+    rollno=121
+    
+student=child()
+print(student.name)
+print(student.age)
+print(student.rollno)'''
+
+#employee and manager
+'''class Employee:
+    empid='E101'
+    ename='Rahul'
+    salary=30000
+
+class Manager(Employee):
+    department='Marketing'
+    Team_size=10
+
+per=Manager()
+print('Employee ID:',per.empid)
+print('Employee Name:',per.ename)
+print('Salary:',per.salary)
+print('Department:',per.department)
+print('Team Size:',per.Team_size)'''
+
+#bank acc and saving acc
+'''class BankAcc:
+    accno=2345678987654322
+    holder_name='Ramya'
+    balance=50000
+    def display(self):
+        print(self.accno,self.holder_name,self.balance,end='\n')
+
+class SavingAcc(BankAcc):
+    interest_rate=5
+    account_type='saving'
+
+cust=SavingAcc()
+cust.display()
+print(cust.interest_rate)
+print(cust.account_type)'''
+
+
+#Company and developers
+'''class Company:
+    cname='RADO'
+    location='Bangalore'
+    CEO='Mallesh'
+    def display(self):
+        print('Company name :',self.cname)
+        print('Location:',self.location)
+        print('CEO:',self.CEO)
+
+class Developer(Company):
+    role='junior developer'
+    dname='bablu'
+
+employee=Developer()
+employee.display()
+print('Employee role:',employee.role)
+print('Name:',employee.dname)'''
+
+#employee salary calculation
+'''class Employee:
+    def __init__(self,empid,ename,basic_salary):
+        self.empid=empid
+        self.ename=ename
+        self.basic_salary=basic_salary
+    def display_details(self):
+        print(self.empid,self.ename,self.basic_salary)
+class Developer(Employee):
+   def __init__(self,empid,ename,basic_salary,role,bonus):
+       super().__init__(empid,ename,basic_salary)
+       self.role=role
+       self.bonus=bonus
+   def Total_sal(self):
+       total_sal=self.basic_salary+self.bonus
+       print('the total salary is:',total_sal)
+
+e1=Developer('E121','mohan',25000,'junior developer',10000)
+e1.display_details()
+print()
+e1.Total_sal()'''
