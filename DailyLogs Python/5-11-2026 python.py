@@ -307,3 +307,155 @@ e1=Developer('E121','mohan',25000,'junior developer',10000)
 e1.display_details()
 print()
 e1.Total_sal()'''
+
+
+######################### DAY3 ################################################
+#################### MULTI LEVEL INHERITANCE ##################################
+#person->employee->manager
+'''class person:
+    name='janu'
+    age =25
+class employee(person):
+    empid='E312'
+    sal=45000
+class manager(employee):
+    department='hr'
+    team_size=10
+m1=manager()
+print(m1.name)
+print(m1.age)
+print(m1.empid)
+print(m1.sal)
+print(m1.department)
+print(m1.team_size)'''
+
+
+#college->department->student
+'''class college:
+    cname='OPS'
+    location='bangalore'
+class department(college):
+    dname='BCA'
+    hod_name='shambbavi'
+class student(department):
+    std_name='raju'
+    roll_no=21
+    marks=89
+    def grade(self):
+        if self.marks>90:
+            print("Grade 'A'")
+        elif self.marks>80:
+            print("Grade 'B'")
+        elif self.marks>60:
+            print("Grade 'C'")
+        else :
+            print("Fail")
+
+s1=student()
+print(s1.cname)
+print(s1.location)
+print(s1.dname)
+print(s1.hod_name)
+print(s1.std_name)
+print(s1.roll_no)
+print(s1.marks)
+
+s1.grade()'''
+
+#product->Electronic->laptop
+'''class product:
+    def __init__(self,pname,price):
+        self.pname=pname
+        self.price=price
+   
+
+class electronic(product):
+    def __init__(self,pname,price,brand,warranty):
+        super().__init__(pname,price)
+        self.brand=brand
+        self.warranty=warranty
+        
+
+class laptop(electronic):
+    def __init__(self,pname,price,brand,warranty,processor,ram,storage):
+        super().__init__(pname,price,brand,warranty)
+        self.processor=processor
+        self.ram=ram
+        self.storage=storage
+    def display(self):
+        print(self.pname,self.price,self.brand,self.warranty,self.processor,self.ram,self.storage)
+
+    def finalprice(self):
+        gst=self.price*18/100
+        finalpr=self.price+gst
+        print('The final price is :',finalpr)
+
+l=laptop('laptop',75000,'DELL','6 month','Intel','DDR5','250 TB')
+l.display()
+l.finalprice()'''
+
+#Employee->Developer->seniorDeveloper
+'''class employee:
+    def __init__(self,bssal):
+        self.bssal=bssal
+    def cal_sal(self):
+        print('The employee salary is:',self.bssal)
+
+class developer(employee):
+    def __init__(self,bssal,devbonus):
+        super().__init__(bssal)
+        self.devbonus=devbonus
+    
+    def cal_sal(self):
+        db=self.bssal+self.devbonus
+        print('The developer salary is :',db)
+
+class seniordeveloper(developer):
+    def __init__(self,bssal,devbonus,senbonus):
+        super().__init__(bssal,devbonus)
+        self.senbonus=senbonus
+        
+    def cal_sal(self):
+        sb=self.bssal+self.devbonus+self.senbonus
+        print('The Senior Developer Salary is :',sb)
+    
+s1=employee(30000)
+s2=developer(30000,5000)
+s3=seniordeveloper(30000,5000,12000)
+s1.cal_sal()
+s2.cal_sal()
+s3.cal_sal()'''
+
+#product->order->payment
+'''
+class product:
+    def __init__(self,pname,price):
+        self.pname=pname
+        self.price=price
+   
+
+class order(product):
+    def __init__(self,pname,price,quantity):
+        super().__init__(pname,price)
+        self.quantity=quantity
+    def cal_tot_price(self):
+        tp=self.price*self.quantity
+        print('The total price:',tp)
+
+class payment(order):
+    def __init__(self,pname,price,quantity,discount,delivery_charge):
+        super().__init__(pname,price,quantity)
+        self.discount=discount
+        self.delivery_charge=delivery_charge
+    def display(self):
+        print('Product:',self.pname)
+        print('Price:',self.price)
+        print('Quantity:',self.quantity)
+        print('Discount:',self.discount)
+        print('Delivery Charge:',self.delivery_charge)
+
+p=payment('Homethether',55000,3,5000,250)
+p.display()
+p.cal_tot_price()'''
+        
+    
