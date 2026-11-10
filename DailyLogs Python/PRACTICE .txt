@@ -1,0 +1,12 @@
+----------------------------- DAY 4 -------------------------------
+OOPS
+*OBJECT ORIENTED PROGRAMMING SYSTEM
+->WHICH IS DEALS WITH THE REAL TIME ENTITY
+-> python is not purely oops concept
+-> python is called as multi-paradigrm
+
+*TERMINOLOGY
+# class:it is the blueprint,medium,structure used to store functionality/behaviour  and attributes of
+  the real time entity
+
+# object:it is the instance or copy of the class
