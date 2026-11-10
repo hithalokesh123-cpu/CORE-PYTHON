@@ -10,3 +10,63 @@ OOPS
   the real time entity
 
 # object:it is the instance or copy of the class
+
+*META CLASS
+class of class
+ex:
+    type(str)=><class type
+    type(type)=>class type
+
+* HOW TO CREATE THE CLASS
+=>syntax=
+       class Cname:
+           s.b
+           attr=value
+
+* HOW TO CREATE OBJECT INSTANCE FOR THE CLASS
+=>syntax=
+         obj=Cname(arg1,arg2,.........argn)
+
+*PROPERTY
+#Generic property: Those property which is common for all the object.
+#Specific property:this property for object which shows thier unique properties
+
+*WITHOUT CREATING THE CLASS ,WE CAN ACCESS THE OBJECT
+=> NO
+
+*CAN WE HAVE MULTPLE OBJECT FOR ONE PARTICULAR CLASS
+=>YES
+
+*CREATION OF CLASS and OBJECT EXAMPLE
+class School:
+    name='ABS'
+    location='bangalore'
+    board='ICSE'
+obj=School()
+
+* ACCESSING THE CLASS PROPERTIES AND OBJ
+=>School.name =>School.location =>School.board
+=>obj.attr
+
+* TO INITIALIZE OR MODIFY
+=>School.name='ABCS'
+=>obj.attr=value
+
+* CONSTRUCTOR
+=>it is special method which is used to initialize the property of the object
+=> __init__()=> it is special method which is start and end with double underscore
+=>it is also called as magic method or dunder method
+=>why it is called as magic method => execute by itself or invoke by itself explicitly,whenever the object is created
+
+*Syntax=
+class Cname:
+    attr
+    def __init__(self,attr1,attr2......attrn):
+        self.attr1=attr1
+        self.attr2=attr2
+        .
+        .
+        .
+        self.attrn=attrn
+obj=Cname(arg1,arg2........argn)
+
