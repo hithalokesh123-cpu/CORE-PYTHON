@@ -459,5 +459,76 @@ p.display()
 p.cal_tot_price()'''
         
 ############################## DAY 5 ############################################
-###################### MULTIPLE INHERITANCE   ################################## 
+###################### MULTIPLE INHERITANCE   ##################################
+#student result management 
+'''class Student:
+    def __init__(self,name,roll_no):
+        self.name=name
+        self.roll_no=roll_no
+        
+    def displayS(self):
+        print('Student name:',self.name)
+        print('Rollno:',self.roll_no)
+        return self 
 
+class Academic:
+    def __init__(self,marks):
+        self.marks=marks
+        
+    def displayA(self):
+        print('Academic marks:',self.marks)
+        return self
+
+class Sports:
+    def __init__(self,sports_marks):
+        self.sports_marks=sports_marks
+        
+    def displaySP(self):
+        print('Sports marks:',self.sports_marks)
+        return self
+
+class Result(Student,Academic,Sports):
+    def __init__(self,name,roll_no,marks,sports_marks):
+        self.name=name
+        self.roll_no=roll_no
+        self.marks=marks
+        self.sports_marks=sports_marks
+
+    def totalmar(self):
+        tm=self.marks+self.sports_marks
+        print('Total Marks:',tm)
+        return self
+
+stud1=Result('Mohan',31,420,45)
+stud1.displayS() .displayA() .displaySP() .totalmar()'''
+
+#Banking System
+'''class Account:
+    def __init__(self,accno):
+        self.accno=accno
+    def display_acc(self):
+        print('Account number:',self.accno)
+        return self
+
+class Customer:
+    def __init__(self,cust_name):
+        self.cust_name=cust_name
+    def display_cust(self):
+        print('Customer name:',self.cust_name)
+        return self
+        
+class Transaction:
+    def __init__(self,bal):
+        self.bal=bal
+    def display_Bal(self):
+        print('Balance:',self.bal)
+        return self
+
+class BankDetails(Account,Customer,Transaction):
+    def __init__(self,accno,cust_name,bal):
+        Account.__init__(self,accno)
+        Customer.__init__(self,cust_name)
+        Transaction.__init__(self,bal)
+
+cust1=BankDetails(1234567890987654,'Muniraju',525000)
+cust1.display_acc() .display_cust() .display_Bal()'''
