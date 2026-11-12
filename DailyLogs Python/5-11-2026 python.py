@@ -535,5 +535,116 @@ cust1.display_acc() .display_cust() .display_Bal()'''
 
 ################# Day 6 ###########################
 ################# DECORATOR  ######################
+#Write a decorator to print message befor and after exceution the function
+'''def my_decorator(func):
+    def wrapper(*args,**kwargs):
+        print('Before exceuting the function')
+        func(*args,**kwargs)
+        print('After executing the function')
+    return wrapper
+    
+@my_decorator
+def greet():
+    print('Hello.Welcome to python')
 
+greet()'''
 
+#Write a decorator to calculate the exceution time or simply count
+# how many times a function is called
+'''def count_calls(func):
+    count=0
+    def wrapper(*args,**kwargs):
+       nonlocal count
+       func(*args,**kwargs)
+       count+=1
+       print(f'Function called {count} times')
+    return wrapper
+
+@count_calls
+def greet():
+    print('hello!')
+
+greet()
+greet()
+greet()
+greet()'''
+
+#write a decorator named check_age that checks whether a person is eligible to vote
+'''def check_age(func):
+    def wrapper(*args,**kwargs):
+        if args[0]>=18:
+           func(*args,**kwargs)
+        else:
+            print('You are not eligible to vote')
+    return wrapper
+
+@check_age
+def vote(age):
+    print('You are eligible to vote')
+
+vote(25)
+vote(16)'''
+
+#create function dashboard()that displays
+#output
+#Welcome to your dashboard!
+#please login first!
+
+'''def dashboard(func):
+    def wrapper(*args,**kwargs):
+        if args[0] == True:
+            func(*args,**kwargs)
+        else:
+            print('Please Login first!')
+    return wrapper
+
+@dashboard
+def login(is_logged_in):
+    print('Welcome to your dashboard')
+
+login(False)
+login(True)'''
+
+#DECORATOR to validate the function arguments
+'''def positive_number(func):
+    def wrapper(*args,**kwargs):
+        for i in args:
+          if i <= 0:
+              print("Negative number are not allowed!")
+              return
+          
+        func(*args,**kwargs)
+    return wrapper
+
+@positive_number
+def multiply(a,b):
+    result=a*b
+    print('Result:',result)
+    
+multiply(5,2)
+multiply(10,-2)
+multiply(4,6)
+multiply(-4,6)'''
+
+#Create a decorator named retry that allows a function to exceute a maximum of 3 times if it fails
+'''def retry(func):
+    def wrapper(*args,**kwargs):
+        for i in range(1,5):
+            print('Attempt:',i)
+            try:
+                coonection=func(*args,**kwargs)
+                if connection ==  True:
+                    print('Server connected successfully')
+                    return
+                else :
+                    print("Connection failed! Retrying...")
+            except:
+                print('Connection failed! Retrying...')
+        print('Unable to connect to server')
+    return wrapper
+
+@retry
+def connect_server():
+    return True
+
+connect_server()'''
