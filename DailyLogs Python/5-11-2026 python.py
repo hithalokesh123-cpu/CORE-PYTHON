@@ -532,3 +532,8 @@ class BankDetails(Account,Customer,Transaction):
 
 cust1=BankDetails(1234567890987654,'Muniraju',525000)
 cust1.display_acc() .display_cust() .display_Bal()'''
+
+################# Day 6 ###########################
+################# DECORATOR  ######################
+
+
