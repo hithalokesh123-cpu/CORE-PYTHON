@@ -651,4 +651,54 @@ connect_server()'''
 
 
 ############################# DAY 7 #########################################
-############################## oops method ############################
+############################## oops method ##################################
+# Employee to manage employee details
+class Employee:
+    company_name='Infosys'
+    total_employees=0
+
+    def __init__(self,empid,ename,sal):
+        self.empid=empid
+        self.ename=ename
+        self.sal=sal
+
+        Employee.total_employees += 1
+
+    def display_details(self):
+        print('Employee id:',self.empid)
+        print('Employee name:',self.ename)
+        print('Salary:',self.sal)
+        print('Company name:',Employee.company_name)
+
+    @classmethod
+    def totalemployee(cls):
+        print('Total Employees:',Employee.total_employees)
+
+    @classmethod
+    def change_company_name(cls,new):
+        print('After changing company:')
+        cls.company_name=new
+        print()
+        print('Company:',cls.company_name)
+
+    @staticmethod
+    def check_salary(sal):
+        if sal>=25000:
+            return 'Eligible'
+        else:
+            return 'Not Eligible'
+
+e1=Employee('101','Raju',25000)
+e2=Employee('102','Janvi',45000)
+e1.display_details()
+print()
+e2.display_details()
+print()
+Employee.totalemployee()
+print()
+Employee.change_company_name('TCS')
+print()
+print('Salary Eligibility:')
+print('Raju:',Employee.check_salary(e1.sal))
+print('Janvi:',Employee.check_salary(e2.sal))        
+
