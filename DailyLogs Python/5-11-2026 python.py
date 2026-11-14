@@ -653,7 +653,7 @@ connect_server()'''
 ############################# DAY 7 #########################################
 ############################## oops method ##################################
 # Employee to manage employee details
-class Employee:
+'''class Employee:
     company_name='Infosys'
     total_employees=0
 
@@ -700,5 +700,9 @@ Employee.change_company_name('TCS')
 print()
 print('Salary Eligibility:')
 print('Raju:',Employee.check_salary(e1.sal))
-print('Janvi:',Employee.check_salary(e2.sal))        
+print('Janvi:',Employee.check_salary(e2.sal))  '''      
+
+
+###################### DAY 8 ###########################################
+#################### oops methods #######################################
 
