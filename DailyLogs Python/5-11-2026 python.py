@@ -705,4 +705,73 @@ print('Janvi:',Employee.check_salary(e2.sal))  '''
 
 ###################### DAY 8 ###########################################
 #################### oops methods #######################################
+class Account:
+    total_accounts=1
+    def __init__(self,accno,cust_name,bal,bname):
+        self.accno=accno
+        self.cust_name=cust_name
+        self.bal=bal
+        self.bname=bname
+        Account.total_accounts+=1
+        
+    def AccountDetails(self):
+        print('Account details:')
+        print('Account number:',self.accno)
+        print('Customer name:',self.cust_name)
+        print('Balance:',self.bal)
+        print('Bank name:',self.bname)
+
+    def Deposit(self):
+        amount=10000
+        self.bal+=amount
+        print('After Deposit:')
+        print('Balance:',self.bal)
+
+    def Withdrawal(self):
+        amt=5000
+        self.bal-=amt
+        print('After Withdrawal:')
+        print('Balance:',self.bal)
+
+    def withdraw(self):
+        a=30000
+        if(a > self.bal):
+            print('Insufficient Balance')
+
+    @classmethod
+    def totalAccno(cls):
+        print('Total Accounts:',Account.total_accounts)
+
+    @classmethod
+    def change_bank(cls,new):
+        print('After Changing Bank Name:')
+        cls.bname=new
+        print('Bank Name:',cls.bname)
+
+    @staticmethod
+    def AmountVal(amt):
+        if amt > 0:
+            return 'True'
+        else:
+            return 'False'
+        
+
+    
+
+cust1=Account(101,'Ankitha',20000,'HDFC')
+cust1.AccountDetails()
+print()
+cust1.Deposit()
+print()
+cust1.Withdrawal()
+print()
+cust1.withdraw()
+print()
+cust1.totalAccno()
+print()
+Account.change_bank('ICICI')
+print()
+print('Account Validation:')
+print(Account.AmountVal(12000))
+print(Account.AmountVal(-2))
 
