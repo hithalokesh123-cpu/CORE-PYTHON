@@ -34,10 +34,164 @@ else:
     print(f.readline())'''
 
 #readlines()=>read all the lines in the form list 
-try:
+'''try:
    f=open('file1.txt','r')
    data=f.readlines() 
 except:
     print('file not found')
 else:
-    print(data)
+    print(data)'''
+
+#append => add data with existing data
+'''f=open('file1.txt','a')
+f.write('Python is programming languge\n')
+f.close()'''
+
+#x--> mode=> *file exist=>error  *file not exist=>create and write the data
+'''f=open('file1.txt','x')
+f.write('Python is programming languge\n')
+f.close()'''
+
+
+
+
+#*************************** ******************************** ***************************************************
+#w+(write and read)
+'''f=open('file1.txt','w+')
+f.writelines(['\n today is boring day \n','file handling is not short\n'])
+f.seek(0)        #0
+print(f.read())
+print(f.tell())  #59
+f.close()'''
+
+
+#r+(read +write)
+#r+w
+'''f=open('file1.txt','r+')
+print(f.read())
+f.write('\n core python complete\n')
+f.close()'''
+
+#output
+##today is Monday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+## core python complete
+
+#w+r
+'''f=open('file1.txt','r+')
+f.write('Yesterday')
+print(f.read())
+f.close()'''
+
+#output==>
+##Monday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+#### core python complete
+
+##file ==>
+##Yesterday Monday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+## core python complete
+
+
+#seek(index)+w+r
+'''f=open('file1.txt','r+')
+f.seek(0)
+f.write('Today ')
+print(f.read())
+f.close()'''
+
+##Today day is monday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+## core python complete
+
+#seek(index)+w+r
+'''f=open('file1.txt','r+')
+f.seek(13)
+f.write('Tuesday ')
+print(f.read())
+f.close()'''
+
+##Today day is Tuesday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+## core python complete
+
+#a+ seek() is doesn't matter data is addN AT END 
+'''f=open('file1.txt','a+')
+f.seek(13)
+f.write('Tuesday ')
+print(f.read())
+f.close()'''
+
+
+##Today day is Tuesday 
+##it is going to end the class 
+##in 3 days 
+##mam is planning to give backup classes also .
+##
+## core python complete
+##Tuesday
+
+
+
+#************************************ ****************************************** ******************************
+# rb(read binary)
+'''f=open('image1.AVIF','rb')
+data=f.read()
+print(data)'''
+
+# give output in decode way XXXX%&*CBMCG^&OH
+
+#wb (write binary)
+'''f=open('image1.AVIF','rb')
+data=f.read()
+f=open('image2.AVIF','wb')
+f.write(data)
+f.close()
+'''
+
+#binary--->text file
+'''l=b'[1,2,3,4]'
+f=open('file1.txt','wb')
+f.write(l)
+f.close()'''
+
+#[1,2,3,4]
+
+
+#pikcle concept
+import pickle
+l=[1,2,3,4]
+data=pickle.dumps(l)  # convert original data to bytes
+f=open('file1.txt','wb')
+f.write(data)
+print(data)
+print(pickle.loads(data))  # convert bytes to original data
+f.close()
+
+
+
+
+
+
+
+
+
+
+
+
