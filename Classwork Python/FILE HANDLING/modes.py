@@ -175,22 +175,49 @@ f.close()'''
 
 
 #pikcle concept
-import pickle
+'''import pickle
 l=[1,2,3,4]
 data=pickle.dumps(l)  # convert original data to bytes
 f=open('file1.txt','wb')
 f.write(data)
 print(data)
 print(pickle.loads(data))  # convert bytes to original data
-f.close()
+f.close()'''
+
+#*******************************************************************************************
+#wb+
+'''f=open('file1.txt','wb+')
+f.write(b'python programming language')
+f.seek(0)
+print(f.read())
+f.close()'''
 
 
+#rb+
+#read=>write
+'''f=open('file1.txt','rb+')
+print(f.read())
+f.write(b'File handling concept start')
+f.close()'''
+#python programming languageFile handling concept start
 
 
+#write=>read
+'''f=open('file1.txt','rb+')
+f.seek(7)
+f.write(b'Javascript ')
+print(f.read())
+f.close()'''
+#python Javascript  languageFile handling concept start
 
 
-
-
+#ab+
+'''f=open('file1.txt','ab+')
+f.write(b'\n it is helpful for Artificial intelligence')
+print(f.read())
+f.close()'''
+#python Javascript  languageFile handling concept start
+#it is helpful for Artificial intelligence
 
 
 
