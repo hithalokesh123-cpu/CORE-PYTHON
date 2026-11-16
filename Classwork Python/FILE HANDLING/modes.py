@@ -55,6 +55,8 @@ f.close()'''
 
 
 
+
+
 #*************************** ******************************** ***************************************************
 #w+(write and read)
 '''f=open('file1.txt','w+')
@@ -149,6 +151,10 @@ f.close()'''
 
 
 
+
+
+
+
 #************************************ ****************************************** ******************************
 # rb(read binary)
 '''f=open('image1.AVIF','rb')
@@ -174,7 +180,7 @@ f.close()'''
 #[1,2,3,4]
 
 
-#pikcle concept
+#*** pikcle concept *****
 '''import pickle
 l=[1,2,3,4]
 data=pickle.dumps(l)  # convert original data to bytes
@@ -183,6 +189,12 @@ f.write(data)
 print(data)
 print(pickle.loads(data))  # convert bytes to original data
 f.close()'''
+
+
+
+
+
+
 
 #*******************************************************************************************
 #wb+
@@ -219,6 +231,26 @@ f.close()'''
 #python Javascript  languageFile handling concept start
 #it is helpful for Artificial intelligence
 
+#pickle=> dumps
+'''import pickle
+data={'python':6,'java':4,'c++':3,'php':3}
+c=pickle.dumps(data)
+print(data,c)
+f=open('file1.txt','wb+')
+f.write(c)
+f.close()'''
+##{'python': 6, 'java': 4, 'c++': 3, 'php': 3}
+##b'\x80\x04\x95)\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x06python\x94K\x06\x8c\x04java\x94K\x04\x8c\x03c++\x94K\x03\x8c\x03php\x94K\x03u.'
 
+#pickle=>loads
+'''import pickle
+d={'python':6,'java':4,'c++':3,'php':3}
+c=pickle.dumps(d)
+print(d,c)
+f=open('file1.txt','wb+')
+f.write(c)
+print(pickle.loads(c))
+f.close()'''
 
-
+#{'python': 6, 'java': 4, 'c++': 3, 'php': 3} b'\x80\x04\x95)\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x06python\x94K\x06\x8c\x04java\x94K\x04\x8c\x03c++\x94K\x03\x8c\x03php\x94K\x03u.'
+#{'python': 6, 'java': 4, 'c++': 3, 'php': 3}
