@@ -198,11 +198,11 @@ f.close()'''
 
 #*******************************************************************************************
 #wb+
-'''f=open('file1.txt','wb+')
+f=open('file1.txt','wb+')
 f.write(b'python programming language')
 f.seek(0)
 print(f.read())
-f.close()'''
+f.close()
 
 
 #rb+
