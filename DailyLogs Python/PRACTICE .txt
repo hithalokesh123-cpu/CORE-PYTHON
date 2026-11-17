@@ -73,5 +73,113 @@ obj=Cname(arg1,arg2........argn)
 
 ################################# DAY 9 #################################################
 ------------------------- PYTHON THEORY CONCEPT -----------------------------------------
+# METHODS->WHICH WILL ONLY DEDICATED TO PARTICULAR CLASS NOT FOR ANY OTHER OBJECT 
+TYPES METHODS :
+
+1)object/instance method =>
+*it is the method work respectively for object properties
+*it aacpet only self as parameter ,there is no any restriction that we have to use self only ,we can use any variable 
+    def mname(self,par1,par2.........):
+          self.par1=par1
+          self.par2=par2
+          .
+          .
+          self.parn=parn
+
+obj.mname(arg1,arg2.........)
+    
+
+2)class method=>it is the method which work with respective of class properties
+    @classmethod
+    def mname(cls,par1,par2.........):
+          self.par1=par1
+          self.par2=par2
+          .
+          .
+          self.parn=parn
+
+obj.mname(arg1,arg2.........)
+
+            
+
+3)static method
+it is not either belongs to class method nor object method
+but it acts supportive for class method and object method 
+@staticmethod
+ def mname(par1,par2.........):
+          self.par1=par1
+          self.par2=par2
+          .
+          .
+          self.parn=parn
+
+obj.mname(arg1,arg2.........)
+Cname.mame(arg1,arg2.........)
+
+
+#PILLER OF OOPS
+1)inheritance
+2)polymorphism
+3)abstrction
+4)Encapsulation
+
+
+1) INHERITANCE
+it is the process of inheriting / derving the properties from one class to another class.
+=>code redundency
+=>code readiblity
+
+PARENT CLASS=> The class which the properties are derived is called as parent class ,super class,base class
+CHILD CLASS=> the class which takes the property from the parent class is called child class,sub class
+
+TYPES OF INHERITANCE
+1)SINGLE-LEVEL INHERITANCE
+2)MULTI LEVEL INHERITANCE
+4)MULTIPLE INHERITANCE
+5)HIERARICHAL INHERITANCE
+6)HYBRID INHERITANCE
+
+1) SINGLE LEVEL INHERITANCE 
+    IT IS THE PROCESS OF INHERITING THE PROPERTIES WHICH INVOLVES ONE PARENT AND CHILD CLASS
+       
+EXAMPLE:
+   class company:
+        cname='Xylom'
+        location='bangalore'
+        ceo='Mallesh'
+   class Employee(company):
+         ename='Manu'
+         eid='E102'
+         location='bangalore'
+         role='software engineer'
+
+person=Employee()
+
+
+2)multi level inheritance
+      it is the process of inheriting the properties from one class to another class ,at more than one level
+
+class company:
+        cname='Xylom'
+        location='bangalore'
+        ceo='Mallesh'
+
+   class Employee(company):
+         ename='Manu'
+         eid='E102'
+         location='bangalore'
+         role='software engineer
+
+    class developer(employee):
+           dno='D102'
+           member=13
+
+*CONSTRUCTOR CHAINING :
+IT IS THE PROCESS OF CALL THE PARENT CLASS CONSTRUCTOR INSIDE THE CHILD CLASS CONSTRUCTOR ,TO AVOID THE RE-INTIALIZATION OF ATTRIBUTE, WHICH ARE ALREADY DEFINED IN THE PARENT CLASS
+   super().__init__(par1,par2.......)
+
+*CHAINING 
+it is the processs of invoking the parent class method inside the child class
+
 
 
