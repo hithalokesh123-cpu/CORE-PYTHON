@@ -705,7 +705,7 @@ print('Janvi:',Employee.check_salary(e2.sal))  '''
 
 ###################### DAY 8 ###########################################
 #################### oops methods #######################################
-class Account:
+'''class Account:
     total_accounts=1
     def __init__(self,accno,cust_name,bal,bname):
         self.accno=accno
@@ -773,5 +773,35 @@ Account.change_bank('ICICI')
 print()
 print('Account Validation:')
 print(Account.AmountVal(12000))
-print(Account.AmountVal(-2))
+print(Account.AmountVal(-2))'''
+
+#################################   DAY 10   ###########################################
+############################ HIERARCHICAL INHERITANCE ##################################
+
+class Employee:
+    def company(self):
+        print("Company:Netlabs")
+        
+    
+class developer(Employee):
+    def coding(self):
+        print("Developer writes code")
+      
+    
+class Tester(Employee):
+    def tests(self):
+        print("Tester tests the application")
+       
+
+class Manager(Employee):
+    def manage(self):
+        print("Manager manages the team")
+      
+
+person=company()
+person.company()
+person.coding()
+person1=developer()
+person1.
+
 
