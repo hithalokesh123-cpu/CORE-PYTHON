@@ -1,17 +1,16 @@
 data='''employee mail 4567876587 id is pallavi@gmail.com  9876893456
- TYP23456 yashwanth123@gmail.COM PENT456 ashwini.k@pqr.in 9998455678 12-09-2026 12.02.26 13/04/2024'''
+ TYP23456 yashwanth123@gmail.com PENT456 ashwini.k@pqr.in 9998455678 12-09-2026 12.02.26 13/04/2024'''
 
 #phno
-# pattern=r'[6-9]\d{9}'
-# import re  
-# phno=re.findall(pattern,data)
-# print(phno)                        
+pattern=r'[6-9]\d{9}'
+import re  
+phno=re.findall(pattern,data)
+print(phno)                        
 
 # #empid
 # pattern=r'[A-Z]{3,5}\d+'
 # import re  
-# empid=re.findall(pattern,data)
-# print(empid)  
+# empid=re.findall(pattern,data)# print(empid)  
 
 # #date
 # pattern=r'[0-9]{2}[./-]+[0-9]{2}[./-]+[0-9]{2,4}'
@@ -19,7 +18,7 @@ data='''employee mail 4567876587 id is pallavi@gmail.com  9876893456
 # date=re.findall(pattern,data)
 # print(date)
 
-# #email
+# #email (pallavi@gmail.com, yashwanth123@gmail.com, ashwini.k@pqr.in)
 # pattern=r'[a-z]+.?\d*[a-z]*\@[a-z]+.[a-z]{2,3}'
 # import re  
 # email=re.findall(pattern,data)

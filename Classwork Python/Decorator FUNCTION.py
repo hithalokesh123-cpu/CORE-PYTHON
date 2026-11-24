@@ -45,7 +45,7 @@ def distance(func):
 
 @distance
 def person():
-    for i in range(1,200):
+    for i in range(1,10):
        print('Steps count')
 
 person()'''

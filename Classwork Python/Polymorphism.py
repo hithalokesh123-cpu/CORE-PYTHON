@@ -54,7 +54,7 @@ def make_sound(obj):
 c.sound()
 d.sound()'''
 
-#################### OPERATOR LOADING #################################
+#################### OPERATOR OVERLOADING #################################
 # dir(int)
 '''class Sam:
     def __init__(self,a):
@@ -304,7 +304,7 @@ class NewAtm(ATM):
         if p==self.pin:
             amount=int(input('enter the amount to deposit:'))
             if self.bal>=amount:
-                self.bal-+amount
+                self.bal-=amount
                 print('withdraw successfully')
             else:
                 print('insufficient balance')
