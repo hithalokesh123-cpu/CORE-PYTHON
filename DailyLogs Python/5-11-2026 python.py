@@ -778,7 +778,7 @@ print(Account.AmountVal(-2))'''
 #################################   DAY 10   ###########################################
 ############################ HIERARCHICAL INHERITANCE ##################################
 
-class Employee:
+'''class Employee:
     def company(self):
         print("Company:Netlabs")
         
@@ -802,6 +802,40 @@ person=company()
 person.company()
 person.coding()
 person1=developer()
-person1.
+person1.'''
 
+############################### DAY 11 #################################################
+########################## ABSTRACT CLASS #############################################
+from abc import ABC ,abstract method
+class ATM(ABC):
+    @abstractmethod
+    def check_bal():
+        pass
+
+    @abstractmethod
+    def deposit():
+        pass
+
+    @abstractmethod
+    def withdraw():
+        pass
+
+    @abstractmethod
+    def update_pin():
+        pass
+
+class newATM(ATM):
+    bname='SBI'
+    location='bangalore'
+    def __init__(self,name,accno,bal,pin):
+        self.name=name
+        self.accno=accno
+        self.bal=bal
+        self.pin=pin
+
+    def update_pin(self):
+        p=int(input('Enter the existing pin:')
+        if p == self.pin:
+              update=int(input('enter the new pin:')
+               
 
