@@ -806,7 +806,7 @@ person1.'''
 
 ############################### DAY 11 #################################################
 ########################## ABSTRACT CLASS #############################################
-from abc import ABC ,abstractmethod
+'''from abc import ABC ,abstractmethod
 class ATM(ABC):
     @abstractmethod
     def check_bal():
@@ -894,6 +894,6 @@ def operations(obj):
         else:
             print('Invalid choice')
              
-operations(cust1)   
+operations(cust1)'''   
 
                

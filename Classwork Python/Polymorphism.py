@@ -333,9 +333,9 @@ def operations(obj):
                    elif choice==5:
                        return 'thank you for using'
                    else:
-                       print('invalid choice')'''
+                       print('invalid choice')
     
-operations(c1)         
+operations(c1) '''        
 
             
             
