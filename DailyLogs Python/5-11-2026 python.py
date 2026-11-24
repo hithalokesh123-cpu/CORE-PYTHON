@@ -806,7 +806,7 @@ person1.'''
 
 ############################### DAY 11 #################################################
 ########################## ABSTRACT CLASS #############################################
-from abc import ABC ,abstract method
+from abc import ABC ,abstractmethod
 class ATM(ABC):
     @abstractmethod
     def check_bal():
@@ -824,7 +824,7 @@ class ATM(ABC):
     def update_pin():
         pass
 
-class newATM(ATM):
+class NewATM(ATM):
     bname='SBI'
     location='bangalore'
     def __init__(self,name,accno,bal,pin):
@@ -834,8 +834,66 @@ class newATM(ATM):
         self.pin=pin
 
     def update_pin(self):
-        p=int(input('Enter the existing pin:')
-        if p == self.pin:
-              update=int(input('enter the new pin:')
-               
+        p=int(input('Enter the existing pin:'))
+        if p==self.pin:
+               new=int(input('enter the new pin:'))
+               self.pin=new
+               print('pin updated  successfully')
+        else:
+            print('invalid pin')
 
+    def deposit(self):
+        p=int(input('Enter the existing pin:'))
+        if p==self.pin:
+              amt=int(input('enter the amount:'))
+              self.bal=self.bal+amt
+              print('Deposited successfully')
+        else:
+            print('ivalid pin')
+
+    def withdraw(self):
+        p=int(input('Enter the existing pin:'))
+        if p==self.pin:
+              amount =int(input('enter the amount:'))
+              if amount<=self.bal:
+                   self.bal=self.bal-amount
+                   print('Withdraw successfully')
+              else:
+                  print('insufficient balance')
+        else:
+            print('invalid pin')
+        
+    def check_bal(self):
+         p=int(input('Enter the existing pin:'))
+         if p==self.pin:
+               print('the available balance is:',self.bal)
+         else:
+               print('invalid pin')
+                     
+cust1=NewATM('Balu',45678998765433456,40000,5678)
+
+def operations(obj):
+    print('Enter 1 to deposit')
+    print('Enter 2 to withdraw')
+    print('Enter 3 to update pin')
+    print('Enter 4 to check bal')
+    print('Enter 5 to stop')
+    while True:
+        choice=int(input('Enter the choice:'))
+        if choice==1:
+            obj.deposit()
+        elif choice==2:
+            obj.withdraw()
+        elif choice==3:
+            obj.update_pin()
+        elif choice==4:
+            obj.check_bal()
+        elif choice==5:
+            print('Thank you  for using')
+            break
+        else:
+            print('Invalid choice')
+             
+operations(cust1)   
+
+               
