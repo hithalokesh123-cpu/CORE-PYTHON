@@ -335,7 +335,7 @@ def operations(obj):
                    else:
                        print('invalid choice')'''
     
-          
+operations(c1)         
 
             
             
