@@ -1,3 +1,5 @@
+#******************** DAY 12 *************************************
+
 #1.Wap to print the square of a number only if it is even.
 '''n=int(input('enter the number:'))
 if n%2==0:
@@ -22,7 +24,27 @@ if n%9==0 and n%6==0:
 
 
 #5.Wap to check whether the given integer is 3 Digit number.
-n=int(input('enter the number:'))
+'''n=int(input('enter the number:'))
 if n>=100 and n<=999:
-    print(n)
-    
+    print(n)'''
+
+
+#6.Wap to check whether the last digit of a given number is 5.
+'''n=int(input('enter the number:'))
+if n%10 == 5:
+    print('5 is last digit')'''
+
+
+#7.Wap to check whether the given data is float
+'''n=eval(input('enter the number:'))
+if type(n)== float:
+    print('it is float number:')'''
+
+#8.Wap to check whether the data is single value data.
+'''data=eval(input('enter the number:'))
+if (type(data)) == (float or int or complex):
+    print('single value data')'''
+
+
+#9.Wap to check whether the given character is digit or not.
+
