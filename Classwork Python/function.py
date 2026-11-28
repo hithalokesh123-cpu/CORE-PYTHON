@@ -155,7 +155,7 @@ def is_strong3():
 
 #USING NESTED FUNCTION            
 #wap to print the prime number between 1 to 1000
-'''def is_prime(n):
+def is_prime(n):
     for i in range(2,n):
         if n%i==0:
             return f'{n} is not prime number'
@@ -166,7 +166,7 @@ def prime_numbers():
     for i in range(1,1001):
         if is_prime(i):
            print(i)
-print(prime_numbers())'''
+print(prime_numbers())
 
 #USING NESTED FUNCTION
 #wap to print the perfect number between 1 to 1000        (6, 28, 496)
