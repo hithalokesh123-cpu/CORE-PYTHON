@@ -896,4 +896,192 @@ def operations(obj):
              
 operations(cust1)'''   
 
-               
+############################## V -Align company question ##########################
+'''s="hello"
+rev=''
+i=0
+while i<len(s):
+     rev=s[i]+rev
+     i+=1
+print(rev)'''
+
+'''n=45673
+rev=0
+i=0
+while i <= n:
+    d=n%10
+    rev=(rev*10)+d
+    i+=1
+    n//=10
+    
+print(rev) '''
+
+'''s='mon'
+temp=s
+rev=s[::-1]
+if temp == rev:
+    print('it is palindrome')
+else:
+    print("it is not palindrome")'''
+
+
+'''s='mon'
+temp=s
+rev=''
+i=0
+while i<len(s):
+    rev=s[i]+rev
+    i+=1
+if temp == rev:
+    print ('it is palindrome')
+else:
+    print('it is not palindrome')'''
+
+'''n=456
+temp=n
+rev=0
+i=0
+while i<=n:
+    d=n%10
+    rev=(rev*10)+d
+    i+=1
+    n//=10
+if temp == rev:
+    print('it is palindrome')
+else:
+    print('it is not palindrome')'''
+
+'''n=int(input('enter the number:'))
+for i in range(2,int(n**0.5)+1):
+    if n%i==0:
+        print('it is not prime number')
+        break
+    else:
+        print('it is prime number')'''
+
+'''def is_prime(n):
+    for i in range(2,n):
+        if(n%i==0):
+            return f' it is not prime number'
+        return f'it is prime number'
+    
+def prime_number():
+    for i in range(1,1001):
+         if is_prime(i):
+             print(i)
+print(prime_number())'''
+
+
+'''def is_armstrong(n):
+    temp=n
+    sum=0
+    l=len(str(n))
+    while n>0:
+        d=n%10
+        sum+=d**l
+        n//=10
+    return temp == sum
+
+
+def arm_strong():
+    for i in range(1,201):
+        if is_armstrong(i):
+            print(i)
+print(arm_strong())'''
+
+'''l=[1,3,5,2,7,8]
+largest=0
+secondlargest=0
+for i in l:
+    if i>=largest:
+        secondlargest=largest
+        largest=i
+
+    elif i>secondlargest and i<largest:
+        secondlargest=i
+
+print(secondlargest)'''
+
+##153
+##1
+##5**3=125
+##3**3=27
+##1+125+27=153
+
+'''def is_arm_strong(n):
+    temp=n
+    sum=0
+    l=len(str(n))
+    i=0
+    while i < n:
+        d=n%10
+        sum+=d**l
+        n//=10
+    return temp == sum
+
+def arm_strong():
+   for i in range(1,200):
+       if is_arm_strong(i):
+           print(i)
+print(arm_strong())'''
+
+'''l=[21,14,15,66,17,28]
+largest=0
+secondlargest=0
+for i in l:
+    if i>=largest:
+        secondlargest=largest
+        largest=i
+
+    elif i>secondlargest and i<largest:
+        secondlargest = i
+print(secondlargest)'''
+ 
+'''s='happiness'
+#out={'h':1,'a':1,'p':2,'i':1,'n':1,'e':1,'s':2}
+out={}
+for i in s:
+    if i not in out:
+        out[i]=1
+    else:
+        out[i]+=1
+    
+print(out) '''
+
+'''s='programming'
+out={}
+for i in s:
+    if i not in out:
+        out[i]=1
+    else:
+        out[i]+=1
+print(out)'''
+
+'''def fact(n):
+    if n==1 or n==0:
+        return 1
+
+    return n*fact(n-1)
+print(fact(5))'''
+
+'''def fibonacci(n ,a=0,b=1,i=0):
+    if i>=n:
+        return 
+    print(a,end=' ')
+    c=a+b
+    a=b
+    b=c
+    return fibonacci(n,a,b,i=i+1)
+fibonacci(5)'''
+
+'''def perfect_number(n):
+    sum=0
+    for i in range(1,n):
+        if n%i == 0:
+            sum=sum+i
+            i+=1
+    return n==sum
+print(perfect_number(6))'''
+
+def strong_number(n):
+    
