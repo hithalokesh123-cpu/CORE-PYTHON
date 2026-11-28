@@ -1083,5 +1083,61 @@ fibonacci(5)'''
     return n==sum
 print(perfect_number(6))'''
 
-def strong_number(n):
+'''def strong_number(n):
+    temp=n
+    sum=0
+    while n<0:
+        d=n%10
+        fact=1
+        for i in range(1,d+1):
+            fact=fact*d
+            sum=sum+fact
+        n//=10
+    return temp==n
+print(strong_number(145))'''
+
+'''def duplicate(l):
+    out=[]
+    for i in l:
+        if i not in out:
+            out.append(i)
+    print(out)
+duplicate([1,2,4,2,3,3,5,6])'''
+
+'''l=[1,2,3,5,6]
+n=6
+total=n*(n+1)//2
+actual=sum(l)
+missing=total-actual
+print(missing)'''
+
+'''l=[10,20,30,40,60,70]
+n=len(l)+1
+total=n*(l[0]+l[-1])//2
+actual=sum(l)
+missing=total-actual
+print(missing)'''
+
+##n*(n+1)//2
     
+'''l=[50,20,30,10,40]
+for i in range(len(l)):
+    for j in range(len(l)-1):
+        if l[j]>l[j+1]:
+            l[j],l[j+1]=l[j+1],l[j]
+print(l)'''
+
+
+'''l=[10,20,30,40,60,70]
+n=len(l)+1
+total=n*(l[0]+l[-1])//2
+actual=sum(l)
+missing=total-actual
+print(missing)'''
+
+l=[50,20,30,10,40]
+for i in range(len(l)):
+    for j in range(len(l)-1):
+        if l[j]>l[j+1]:
+            l[j],l[j+i]=l[j+i],l[j]
+print(l)
